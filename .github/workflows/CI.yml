@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build the Docker image
-      run: docker build -t 9441ashiesh/CI-CD .
+      run: docker build -t 9441ashiesh/ci-cd .
 
     - name: Push to DockerHub
-      run: docker push 9441ashiesh/CI-CD:latest
+      run: docker push 9441ashiesh/ci-cd:latest
