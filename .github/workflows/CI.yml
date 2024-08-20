@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: 9441ashiesh/ci-cd
+        tags: ashieshm/ci-cd
