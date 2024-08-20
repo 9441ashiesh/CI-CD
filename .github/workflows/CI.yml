@@ -19,8 +19,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build the Docker image
-      run: docker build -t 9441ashiesh/ci-cd .
-
-    - name: Push to DockerHub
-      run: docker push 9441ashiesh/ci-cd:latest
+    - name: Build and Push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: 9441ashiesh/ci-cd:latest
