@@ -15,8 +15,8 @@ jobs:
 
     steps:
     - name: Pull Docker image
-      run: sudo docker pull  9441ashiesh/CI-CD:latest
+      run: sudo docker pull  ashieshm/ci-cd:latest
     - name: Delete Old docker container
       run: sudo docker rm -f CI-CD-container || true
     - name: Run Docker Container
-      run: sudo docker run -d -p 8080:8080 --name cicd-pipeline-container  9441ashiesh/CI-CD
+      run: sudo docker run -d -p 8080:8080 --name cicd-pipeline-container  ashieshm/ci-cd
